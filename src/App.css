@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.ant-menu-submenu {
+  padding: 5px;
+  font-size: 22px;
+}
+.list-item-icon {
+  font-size: 30px;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+::-webkit-scrollbar{
+  display: none;
+}
+.ant-input{
+  resize: none !important;
+}

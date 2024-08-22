@@ -1,0 +1,93 @@
+{
+  "products": [
+    {
+      "id": "b9c8",
+      "name": "pinepple",
+      "price": "32000",
+      "expiryDate": "2024-08-29",
+      "origin": "USA",
+      "type": "fruits"
+    },
+    {
+      "id": "8490",
+      "name": "carrot",
+      "price": "7500",
+      "expiryDate": "2024-08-31",
+      "origin": "Mexico",
+      "type": "vegetables"
+    },
+    {
+      "id": "926d",
+      "name": "coconut",
+      "price": "46000",
+      "expiryDate": "2024-08-27",
+      "origin": "Australia",
+      "type": "fruits"
+    },
+    {
+      "id": "a9fc",
+      "name": "potato",
+      "price": "3400",
+      "expiryDate": "2024-09-26",
+      "origin": "Saudi Arabia",
+      "type": "vegetables"
+    },
+    {
+      "id": "9b3e",
+      "name": "pear",
+      "price": "5700",
+      "expiryDate": "2024-08-28",
+      "origin": "Mexico",
+      "type": "fruits"
+    },
+    {
+      "id": "108f",
+      "name": "pomegranate",
+      "price": "10000",
+      "expiryDate": "2024-08-19",
+      "origin": "Brazil",
+      "type": "fruits"
+    },
+    {
+      "id": "2b84",
+      "name": "grape",
+      "price": "12300",
+      "expiryDate": "2024-08-27",
+      "origin": "Australia",
+      "type": "fruits"
+    },
+    {
+      "id": "65a5",
+      "name": "tomato",
+      "price": "10500",
+      "expiryDate": "2024-09-04",
+      "origin": "Russia",
+      "type": "vegetables"
+    },
+    {
+      "id": "647a",
+      "name": "ginger",
+      "price": "28000",
+      "expiryDate": "2024-09-07",
+      "origin": "Russia",
+      "type": "other"
+    },
+    {
+      "id": "d1ff",
+      "name": "bread",
+      "price": "5000",
+      "expiryDate": "2024-08-28",
+      "origin": "Italy",
+      "type": "other"
+    },
+    {
+      "id": "82f3",
+      "name": "soup",
+      "price": "30000",
+      "expiryDate": "2024-08-29T19:00:00.000Z",
+      "origin": "Russia",
+      "type": "Other",
+      "description": "Soup is a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, milk, or water. Hot soups are additionally characterized by boiling solid ingredients in liquids in a pot until the flavors are extracted, forming a broth."
+    }
+  ]
+}
