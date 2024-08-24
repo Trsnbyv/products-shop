@@ -26,11 +26,11 @@ const items = [
           },
           {
             key: "3",
-            label: "Special Products",
+            label: <Link to="/special-product">Special Products</Link>,
           },
           {
             key: "4",
-            label: <Link to="/favourites">Favourite Products</Link>,
+            label: <Link to="/special-product">Favourite Products</Link>,
         },
         ],
       },

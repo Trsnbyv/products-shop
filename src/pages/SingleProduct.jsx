@@ -1,11 +1,14 @@
 import { useEffect, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import { Button, Card, Descriptions } from 'antd';
+import { Button, Modal, message, List, Typography, Divider } from 'antd';
+import moment from 'moment';
 
 const SingleProduct = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [product, setProduct] = useState(null);
+  const [isModalVisible, setIsModalVisible] = useState(false);
 
   useEffect(() => {
     axios.get(`http://localhost:3000/products/${id}`)
@@ -17,24 +20,72 @@ const SingleProduct = () => {
       });
   }, [id]);
 
+  const handleDelete = async () => {
+    await axios.delete(`http://localhost:3000/products/${id}`);
+    message.success('Product deleted successfully');
+    navigate('/');
+  };
+
+  const showDeleteModal = () => {
+    setIsModalVisible(true);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
+
   if (!product) {
     return <div>Loading...</div>;
   }
 
+  const productData = [
+    { label: 'Price', value: `${product.price} UZS` },
+    { label: 'Expiry Date', value: moment(product.expiryDate).format('YYYY-MM-DD') },
+    { label: 'Origin', value: product.origin },
+    { label: 'Type', value: product.type },
+    { label: 'Description', value: product.description }
+  ];
+
   return (
-    
-    <Card title={product.name} className='capitalize'>
-       <Link to="/" className='absolute top-3 left-[100px]'>
-          <Button type="primary">Back</Button>
+    <div className="product-details p-5">
+      <div className='flex items-center gap-3'>
+      <h2 className='text-[27px] capitalize font-semibold'>{product.name}</h2>
+      <Link to="/" className="back-button">
+        <Button>Back</Button>
+      </Link>
+      </div>
+      <Divider orientation="left">Product Details</Divider>
+      <List
+        bordered
+        dataSource={productData}
+        renderItem={item => (
+          <List.Item>
+            <Typography.Text>
+              <span className='text-[20px] font-semibold inline'>{item.label}: </span>
+              <p className='text-[16px] inline'>{item.value}</p>
+            </Typography.Text> 
+          </List.Item>
+        )}
+      />
+      <div className="action-buttons mt-5 flex gap-2">
+        <Button type="primary" onClick={showDeleteModal}>
+          Delete
+        </Button>
+        <Link to={`/edit-product/${product.id}`}>
+          <Button>Edit</Button>
         </Link>
-      <Descriptions bordered column={1}>
-        <Descriptions.Item label="Price">${product.price}</Descriptions.Item>
-        <Descriptions.Item label="Expiry Date">{product.expiryDate}</Descriptions.Item>
-        <Descriptions.Item label="Origin">{product.origin}</Descriptions.Item>
-        <Descriptions.Item label="Type">{product.type}</Descriptions.Item>
-        <Descriptions.Item label="Description">{product.description}</Descriptions.Item>
-      </Descriptions>
-    </Card>
+      </div>
+      <Modal
+        title="Delete Confirmation"
+        visible={isModalVisible}
+        onOk={handleDelete}
+        onCancel={handleCancel}
+        okText="Yes"
+        cancelText="No"
+      >
+        <p>Do you really want to delete this product?</p>
+      </Modal>
+    </div>
   );
 };
 

@@ -33,14 +33,6 @@
       "type": "vegetables"
     },
     {
-      "id": "9b3e",
-      "name": "pear",
-      "price": "5700",
-      "expiryDate": "2024-08-28",
-      "origin": "Mexico",
-      "type": "fruits"
-    },
-    {
       "id": "108f",
       "name": "pomegranate",
       "price": "10000",
@@ -65,14 +57,6 @@
       "type": "vegetables"
     },
     {
-      "id": "647a",
-      "name": "ginger",
-      "price": "28000",
-      "expiryDate": "2024-09-07",
-      "origin": "Russia",
-      "type": "other"
-    },
-    {
       "id": "d1ff",
       "name": "bread",
       "price": "5000",
@@ -81,13 +65,13 @@
       "type": "other"
     },
     {
-      "id": "82f3",
       "name": "soup",
       "price": "30000",
       "expiryDate": "2024-08-29T19:00:00.000Z",
       "origin": "Russia",
       "type": "Other",
-      "description": "Soup is a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, milk, or water. Hot soups are additionally characterized by boiling solid ingredients in liquids in a pot until the flavors are extracted, forming a broth."
+      "description": "Soup is a primarily liquid food, generally served warm or hot (but may be cool or cold), that is made by combining ingredients of meat or vegetables with stock, milk, or water. Hot soups are additionally characterized by boiling solid ingredients in liquids in a pot until the flavors are extracted, forming a broth.",
+      "id": "82f3"
     }
   ]
 }
